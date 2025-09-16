@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle del Producto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .producto-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .header .categoria {
+      color: #667eea;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .detalles {
+      margin-bottom: 30px;
+    }
+
+    .descripcion {
+      color: #666;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .especificaciones {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .especificaciones h3 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .spec-item:last-child {
+      border-bottom: none;
+    }
+
+    .spec-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .spec-value {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .precio-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .precio {
+      font-size: 3em;
+      color: #667eea;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .precio-antes {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    .descuento {
+      color: #28a745;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .stock {
+      color: #28a745;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .acciones {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .btn-primario {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      min-width: 200px;
+    }
+
+    .btn-primario:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secundario {
+      background: transparent;
+      color: #667eea;
+      border: 2px solid #667eea;
+      padding: 16px 30px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 150px;
+    }
+
+    .btn-secundario:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    .garantia {
+      text-align: center;
+      margin-top: 25px;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .producto-card {
+        padding: 30px 20px;
+      }
+
+      .header h1 {
+        font-size: 2em;
+      }
+
+      .precio {
+        font-size: 2.5em;
+      }
+
+      .acciones {
+        flex-direction: column;
+      }
+
+      .btn-primario,
+      .btn-secundario {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="producto-card">
+      <div class="header">
+        <span class="categoria">Tecnología • Laptops</span>
+        <h1>Laptop Gamer Pro RTX 4060</h1>
+      </div>
+
+      <div class="detalles">
+        <p class="descripcion">
+          Potente laptop diseñada para gaming y trabajo intensivo.
+          Rendimiento excepcional con gráficos NVIDIA RTX 4060 y
+          procesador de última generación.
+        </p>
+
+        <div class="especificaciones">
+          <h3>Especificaciones Técnicas</h3>
+          <div class="spec-item">
+            <span class="spec-label">Procesador</span>
+            <span class="spec-value">Intel Core i7-13700H</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Tarjeta Gráfica</span>
+            <span class="spec-value">NVIDIA RTX 4060 8GB</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">RAM</span>
+            <span class="spec-value">16GB DDR5</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Almacenamiento</span>
+            <span class="spec-value">1TB SSD NVMe</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Pantalla</span>
+            <span class="spec-value">15.6" FHD 144Hz</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="precio-section">
+        <div class="precio-antes">$29,999 MXN</div>
+        <div class="precio">$25,999 MXN</div>
+        <div class="descuento">13% de descuento</div>
+      </div>
+
+      <div class="stock">✓ En stock - Disponible para envío inmediato</div>
+
+      <div class="acciones">
+        <div id="widget-container" data-key="PUBLICKEY_TEST" data-venta='{
+       "name": "naipes dragon ball z",
+       "description": "juego de naipes con tematica de dragonball z",
+       "monto": "500.50"
+     }' data-idOrder="order0002">
+        </div>
+      </div>
+
+      <div class="garantia">
+        ✅ Garantía de 2 años • Envío gratis • Devoluciones en 30 días
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="https://app.payli.com.mx/widget/assets/index.css">
+  <script type="module" src="https://app.payli.com.mx/widget/assets/index.js"></script>
+</body>
+
+</html>
